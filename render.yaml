@@ -1,0 +1,45 @@
+﻿services:
+  - type: web
+    name: debate-ai-engine
+    runtime: python
+    rootDir: ai-engine
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: MONGO_URL
+        sync: false
+      - key: MONGO_DB_NAME
+        value: debate_platform_database
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: REFEREE_MODEL
+        value: gemini-flash-latest
+      - key: OPPONENT_MODEL
+        value: gemini-flash-latest
+      - key: ASSISTANT_MODEL
+        value: gemini-flash-latest
+
+  - type: web
+    name: debate-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: AI_ENGINE_URL
+        fromService:
+          type: web
+          name: debate-ai-engine
+          property: host
+      - key: CORS_ORIGINS
+        value: "*"
