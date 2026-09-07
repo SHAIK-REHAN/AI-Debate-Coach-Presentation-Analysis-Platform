@@ -1,0 +1,1093 @@
+{
+  "be_endpoints_count": 97,
+  "be_endpoints": [
+    {
+      "method": "POST",
+      "route": "/signup",
+      "guard": "public/inline"
+    },
+    {
+      "method": "POST",
+      "route": "/login",
+      "guard": "public/inline"
+    },
+    {
+      "method": "POST",
+      "route": "/session",
+      "guard": "public/inline"
+    },
+    {
+      "method": "GET",
+      "route": "/session/:userId",
+      "guard": "public/inline"
+    },
+    {
+      "method": "GET",
+      "route": "/skills/:userId",
+      "guard": "public/inline"
+    },
+    {
+      "method": "POST",
+      "route": "/session/log",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/overview",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/assigned-topics",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/learner/tool-usage",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/learning-path",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/goals",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/learner/goals",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/learner/goals/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/scheduled-sessions",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/learner/scheduled-sessions",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/learner/scheduled-sessions/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/drafts",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/learner/drafts",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/learner/drafts/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/notes",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/learner/notes",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/learner/notes/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/learner/notes/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/learner/presentation-sessions",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/presentation-sessions",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/learner/upload-audio",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/learner/notifications",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/profile/update",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/profile/onboarding",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/profile/password",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/learners",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/overview",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/fallacy-reports",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/presentation-reviews",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/performance-analytics",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/skill-gap-analysis",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/export-csv",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/learner-notes/:learnerId",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/coach/learner-notes/:learnerId",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/coaching-plans",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/coach/coaching-plans",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/coach/coaching-plans/:id/milestone/:index",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/notifications",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/notifications",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/support/tickets",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/support/tickets/mine",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coach/learner/:learnerId/sessions",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/coach/session/:sessionId/review",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/overview",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/classes",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/educator/classes",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/educator/classes/:id/add-learner",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/educator/classes/:id/remove-learner",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/educator/classes/:id/assign-topic",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/learner-notes/:learnerId",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/educator/learner-notes/:learnerId",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/evaluation-queue",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/educator/evaluate/:sessionId",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/class-analytics/:classId",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/presentation-reports",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/skill-gap-analysis",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/export-csv",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/assignments",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/educator/assignments",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/educator/assignments/:id/grade",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/rubrics",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/educator/rubrics",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/educator/rubrics/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/educator/announcements",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/educator/announcements",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/resources",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/resources",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/overview",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/top-active-debates",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/ai-service-usage",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/agent-performance",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/admin/topics/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/resources",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/admin/resources/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/rubrics",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "DELETE",
+      "route": "/admin/rubrics/:id",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/export-csv",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/notices",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/admin/notices",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/admin/notices/:id/deactivate",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/support-tickets",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/admin/support-tickets/:id/resolve",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/system-health",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/security-info",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/admin/audit-logs",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/admin/users/:userId/assign-coach",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/coaches",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "PUT",
+      "route": "/learner/choose-coach",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/profile/me",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/topics",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "GET",
+      "route": "/topics/formats",
+      "guard": "requireRole/verifyToken"
+    },
+    {
+      "method": "POST",
+      "route": "/topics",
+      "guard": "requireRole/verifyToken"
+    }
+  ],
+  "ai_endpoints_count": 26,
+  "ai_endpoints": [
+    {
+      "method": "POST",
+      "route": "/api/v1/presentation/analyze"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/presentation/analyze-full"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/session/start"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/session/{session_id}/submit"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/session/{session_id}/continue"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/session/start-stream"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/session/{session_id}/submit-stream"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/session/{session_id}/continue-stream"
+    },
+    {
+      "method": "GET",
+      "route": "/api/v1/debate/persona-options"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/knowledge/documents"
+    },
+    {
+      "method": "GET",
+      "route": "/api/v1/knowledge/documents"
+    },
+    {
+      "method": "GET",
+      "route": "/api/v1/knowledge/search"
+    },
+    {
+      "method": "GET",
+      "route": "/health"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/tools/argument-analyzer"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/tools/fallacy-detector"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/tools/counterargument-generator"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/transcribe"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/turn-text"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/turn-text-stream"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/turn"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/debate/turn-stream"
+    },
+    {
+      "method": "GET",
+      "route": "/api/v1/admin/agent-performance"
+    },
+    {
+      "method": "POST",
+      "route": "/api/v1/assistant/chat"
+    },
+    {
+      "method": "GET",
+      "route": "/api/v1/assistant/conversations"
+    },
+    {
+      "method": "PUT",
+      "route": "/api/v1/assistant/conversation/{conversation_id}/title"
+    },
+    {
+      "method": "GET",
+      "route": "/api/v1/assistant/conversation/{conversation_id}"
+    }
+  ],
+  "fe_routes_count": 44,
+  "fe_routes": [
+    {
+      "path": "/onboarding",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/learning-path",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/recommended-for-you",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/reports",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\", \"Educator\", \"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/my-debates",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/tools/argument-analyzer",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/tools/fallacy-detector",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/tools/counterargument-generator",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/ai-debate-simulation",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/presentation-analysis",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/my-presentations",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/performance-scores",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/feedback-coaching",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/my-notes",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/notifications",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/coach/learners",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/coach/fallacy-reports",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/coach/presentation-reviews",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/coach/performance-analytics",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/coach/skill-gap-analysis",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/coaching-plans",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/coach/notifications",
+      "component": "<ProtectedRoute roles={[\"Debate Coach\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/users",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/classes",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/learners",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/evaluation-queue",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/class-analytics",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/presentation-reports",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/skill-gap-analysis",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/assignments",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/rubrics",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/announcements",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/resources",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/educator/notifications",
+      "component": "<ProtectedRoute roles={[\"Educator\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/role-permissions",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/top-active-debates",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/ai-service-usage",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/content-management",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/phased-debate",
+      "component": "<ProtectedRoute roles={[\"Learner\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/notification-center",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/support-tickets",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/system-health",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/security-compliance",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    },
+    {
+      "path": "/admin/audit-logs",
+      "component": "<ProtectedRoute roles={[\"Admin\"]",
+      "roles": "All authenticated (or public for /)"
+    }
+  ],
+  "models": [
+    "Announcement.js",
+    "Assignment.js",
+    "AuditLog.js",
+    "Class.js",
+    "CoachingPlan.js",
+    "Draft.js",
+    "Goal.js",
+    "Note.js",
+    "PlatformNotice.js",
+    "PresentationSession.js",
+    "Resource.js",
+    "Rubric.js",
+    "ScheduledSession.js",
+    "Session.js",
+    "SupportTicket.js",
+    "ToolUsageLog.js",
+    "Topic.js",
+    "User.js"
+  ],
+  "todos_count": 94,
+  "todos": [
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 2,
+      "text": "import tempfile"
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 73,
+      "text": "\"message\": f\"Gemini quota is temporarily exhausted. Please try again in {retry_sec} seconds.\","
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 74,
+      "text": "\"detail\": f\"Gemini quota is temporarily exhausted. Please try again in {retry_sec} seconds.\""
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 92,
+      "text": "\"message\": f\"Gemini quota is temporarily exhausted. Please try again in {retry_sec} seconds.\","
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 93,
+      "text": "\"detail\": f\"Gemini quota is temporarily exhausted. Please try again in {retry_sec} seconds.\""
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 132,
+      "text": "with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:"
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 168,
+      "text": "with tempfile.NamedTemporaryFile(delete=False, suffix=doc_suffix) as doc_tmp:"
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 173,
+      "text": "with tempfile.NamedTemporaryFile(delete=False, suffix=audio_suffix) as audio_tmp:"
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 503,
+      "text": "with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:"
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 647,
+      "text": "\"detail\": f\"Gemini quota is temporarily exhausted. Please try again in {retry_sec} seconds.\""
+    },
+    {
+      "file": "ai-engine/app/main.py",
+      "line": 748,
+      "text": "\"detail\": f\"Gemini quota is temporarily exhausted. Please try again in {retry_sec} seconds.\""
+    },
+    {
+      "file": "ai-engine/app/agents/chatbot_engine.py",
+      "line": 62,
+      "text": "self._opponent_llm = get_chat_llm(model_name=settings.OPPONENT_MODEL, temperature=0.7)"
+    },
+    {
+      "file": "ai-engine/app/core/llm.py",
+      "line": 7,
+      "text": "def get_chat_llm(model_name: str, temperature: float = 0.0, schema: Optional[Type[BaseModel]] = None):"
+    },
+    {
+      "file": "ai-engine/app/core/llm.py",
+      "line": 15,
+      "text": "temperature=temperature"
+    },
+    {
+      "file": "ai-engine/app/services/argument_analysis.py",
+      "line": 1,
+      "text": "from langchain_core.prompts import ChatPromptTemplate"
+    },
+    {
+      "file": "ai-engine/app/services/argument_analysis.py",
+      "line": 7,
+      "text": "_analyst_agent = get_chat_llm(model_name=settings.REFEREE_MODEL, temperature=0.0, schema=ArgumentAnalysisSchema)"
+    },
+    {
+      "file": "ai-engine/app/services/argument_analysis.py",
+      "line": 26,
+      "text": "_analyst_prompt = ChatPromptTemplate.from_messages([(\"system\", _ANALYST_SYSTEM_PROMPT), (\"user\", \"{text}\")])"
+    },
+    {
+      "file": "ai-engine/app/services/assistant_chat.py",
+      "line": 8,
+      "text": "temperature=0.5"
+    },
+    {
+      "file": "ai-engine/app/services/content_reviewer.py",
+      "line": 8,
+      "text": "from langchain_core.prompts import ChatPromptTemplate"
+    },
+    {
+      "file": "ai-engine/app/services/content_reviewer.py",
+      "line": 12,
+      "text": "_reviewer_llm = ChatGoogleGenerativeAI(model=settings.REFEREE_MODEL, google_api_key=settings.GOOGLE_API_KEY, temperature=0.0)"
+    },
+    {
+      "file": "ai-engine/app/services/content_reviewer.py",
+      "line": 28,
+      "text": "_reviewer_prompt = ChatPromptTemplate.from_messages(["
+    },
+    {
+      "file": "ai-engine/app/services/context_summarizer.py",
+      "line": 2,
+      "text": "from langchain_core.prompts import ChatPromptTemplate"
+    },
+    {
+      "file": "ai-engine/app/services/context_summarizer.py",
+      "line": 6,
+      "text": "# creative temperature, just accuracy."
+    },
+    {
+      "file": "ai-engine/app/services/context_summarizer.py",
+      "line": 10,
+      "text": "temperature=0.0"
+    },
+    {
+      "file": "ai-engine/app/services/context_summarizer.py",
+      "line": 13,
+      "text": "_SUMMARY_PROMPT = ChatPromptTemplate.from_messages(["
+    },
+    {
+      "file": "ai-engine/app/services/counterargument_generator.py",
+      "line": 2,
+      "text": "from langchain_core.prompts import ChatPromptTemplate"
+    },
+    {
+      "file": "ai-engine/app/services/counterargument_generator.py",
+      "line": 9,
+      "text": "temperature=0.6"
+    },
+    {
+      "file": "ai-engine/app/services/counterargument_generator.py",
+      "line": 32,
+      "text": "_counter_prompt = ChatPromptTemplate.from_messages(["
+    },
+    {
+      "file": "ai-engine/app/services/debate_state_machine.py",
+      "line": 46,
+      "text": "_opponent_llm = get_chat_llm(model_name=settings.OPPONENT_MODEL, temperature=0.7)"
+    },
+    {
+      "file": "ai-engine/app/services/delivery_coach.py",
+      "line": 1,
+      "text": "from langchain_core.prompts import ChatPromptTemplate"
+    },
+    {
+      "file": "ai-engine/app/services/delivery_coach.py",
+      "line": 7,
+      "text": "_coach_agent = get_chat_llm(model_name=settings.REFEREE_MODEL, temperature=0.2, schema=DeliveryAssessmentSchema)"
+    },
+    {
+      "file": "ai-engine/app/services/delivery_coach.py",
+      "line": 17,
+      "text": "_coach_prompt = ChatPromptTemplate.from_messages(["
+    },
+    {
+      "file": "ai-engine/app/services/fallacy_agent.py",
+      "line": 1,
+      "text": "from langchain_core.prompts import ChatPromptTemplate"
+    },
+    {
+      "file": "ai-engine/app/services/fallacy_agent.py",
+      "line": 10,
+      "text": "temperature=0.0,"
+    },
+    {
+      "file": "ai-engine/app/services/fallacy_agent.py",
+      "line": 49,
+      "text": "_referee_prompt = ChatPromptTemplate.from_messages(["
+    },
+    {
+      "file": "ai-engine/tests/test_consistency.py",
+      "line": 5,
+      "text": "quota) \u2014 that's intentional, a mocked test would tell us nothing about"
+    },
+    {
+      "file": "backend/package-lock.json",
+      "line": 1604,
+      "text": "\"integrity\": \"sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==\","
+    },
+    {
+      "file": "frontend/package-lock.json",
+      "line": 69,
+      "text": "\"@babel/template\": \"^7.29.7\","
+    },
+    {
+      "file": "frontend/package-lock.json",
+      "line": 200,
+      "text": "\"@babel/template\": \"^7.29.7\","
+    },
+    {
+      "file": "frontend/package-lock.json",
+      "line": 223,
+      "text": "\"node_modules/@babel/template\": {"
+    },
+    {
+      "file": "frontend/package-lock.json",
+      "line": 225,
+      "text": "\"resolved\": \"https://registry.npmjs.org/@babel/template/-/template-7.29.7.tgz\","
+    },
+    {
+      "file": "frontend/package-lock.json",
+      "line": 249,
+      "text": "\"@babel/template\": \"^7.29.7\","
+    },
+    {
+      "file": "frontend/package-lock.json",
+      "line": 3478,
+      "text": "\"url\": \"https://github.com/sponsors/colinhacks\""
+    },
+    {
+      "file": "frontend/README.md",
+      "line": 3,
+      "text": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules."
+    },
+    {
+      "file": "frontend/README.md",
+      "line": 12,
+      "text": "The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation)."
+    },
+    {
+      "file": "frontend/README.md",
+      "line": 16,
+      "text": "If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project."
+    },
+    {
+      "file": "frontend/src/components/AIChatbotWidget.jsx",
+      "line": 257,
+      "text": "placeholder=\"Type your message...\""
+    },
+    {
+      "file": "frontend/src/components/VoiceRecorder,jsx.txt",
+      "line": 166,
+      "text": "placeholder=\"Write your argument...\""
+    },
+    {
+      "file": "frontend/src/pages/AdminNotificationCenter.jsx",
+      "line": 30,
+      "text": "<textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder=\"System-wide announcement...\""
+    },
+    {
+      "file": "frontend/src/pages/AdminUserManagement.jsx",
+      "line": 40,
+      "text": "<input value={search} onChange={(e) => setSearch(e.target.value)} placeholder=\"Search by name or email...\""
+    }
+  ]
+}

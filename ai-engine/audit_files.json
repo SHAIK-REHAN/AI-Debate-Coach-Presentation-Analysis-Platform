@@ -1,0 +1,956 @@
+[
+  {
+    "rel": ".gitignore",
+    "lines": 5,
+    "name": ".gitignore",
+    "size": 43
+  },
+  {
+    "rel": "LICENSE",
+    "lines": 21,
+    "name": "LICENSE",
+    "size": 1075
+  },
+  {
+    "rel": "README.md",
+    "lines": 2,
+    "name": "README.md",
+    "size": 120
+  },
+  {
+    "rel": "ai-engine\\.env",
+    "lines": 12,
+    "name": ".env",
+    "size": 348
+  },
+  {
+    "rel": "ai-engine\\.env.example",
+    "lines": 12,
+    "name": ".env.example",
+    "size": 324
+  },
+  {
+    "rel": "ai-engine\\pytest.ini",
+    "lines": 2,
+    "name": "pytest.ini",
+    "size": 29
+  },
+  {
+    "rel": "ai-engine\\requirements.txt",
+    "lines": 14,
+    "name": "requirements.txt",
+    "size": 185
+  },
+  {
+    "rel": "ai-engine\\scratch_test.js",
+    "lines": 42,
+    "name": "scratch_test.js",
+    "size": 1370
+  },
+  {
+    "rel": "ai-engine\\app\\database.py",
+    "lines": 98,
+    "name": "database.py",
+    "size": 4276
+  },
+  {
+    "rel": "ai-engine\\app\\main.py",
+    "lines": 891,
+    "name": "main.py",
+    "size": 37062
+  },
+  {
+    "rel": "ai-engine\\app\\__init__.py",
+    "lines": 0,
+    "name": "__init__.py",
+    "size": 0
+  },
+  {
+    "rel": "ai-engine\\app\\agents\\chatbot_engine.py",
+    "lines": 201,
+    "name": "chatbot_engine.py",
+    "size": 11620
+  },
+  {
+    "rel": "ai-engine\\app\\agents\\__init__.py",
+    "lines": 0,
+    "name": "__init__.py",
+    "size": 0
+  },
+  {
+    "rel": "ai-engine\\app\\config\\debate_formats.py",
+    "lines": 139,
+    "name": "debate_formats.py",
+    "size": 8422
+  },
+  {
+    "rel": "ai-engine\\app\\core\\config.py",
+    "lines": 37,
+    "name": "config.py",
+    "size": 1213
+  },
+  {
+    "rel": "ai-engine\\app\\core\\llm.py",
+    "lines": 21,
+    "name": "llm.py",
+    "size": 670
+  },
+  {
+    "rel": "ai-engine\\app\\core\\__init__.py",
+    "lines": 0,
+    "name": "__init__.py",
+    "size": 0
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\argument_analysis.py",
+    "lines": 20,
+    "name": "argument_analysis.py",
+    "size": 1428
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\content_review.py",
+    "lines": 16,
+    "name": "content_review.py",
+    "size": 962
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\counterargument.py",
+    "lines": 22,
+    "name": "counterargument.py",
+    "size": 1158
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\debate.py",
+    "lines": 22,
+    "name": "debate.py",
+    "size": 699
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\debate_session.py",
+    "lines": 38,
+    "name": "debate_session.py",
+    "size": 1036
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\delivery.py",
+    "lines": 14,
+    "name": "delivery.py",
+    "size": 750
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\fallacy.py",
+    "lines": 42,
+    "name": "fallacy.py",
+    "size": 1920
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\presentation.py",
+    "lines": 11,
+    "name": "presentation.py",
+    "size": 655
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\presentation_full.py",
+    "lines": 13,
+    "name": "presentation_full.py",
+    "size": 462
+  },
+  {
+    "rel": "ai-engine\\app\\schemas\\__init__.py",
+    "lines": 0,
+    "name": "__init__.py",
+    "size": 0
+  },
+  {
+    "rel": "ai-engine\\app\\services\\argument_analysis.py",
+    "lines": 33,
+    "name": "argument_analysis.py",
+    "size": 1760
+  },
+  {
+    "rel": "ai-engine\\app\\services\\assistant_chat.py",
+    "lines": 78,
+    "name": "assistant_chat.py",
+    "size": 3193
+  },
+  {
+    "rel": "ai-engine\\app\\services\\content_reviewer.py",
+    "lines": 37,
+    "name": "content_reviewer.py",
+    "size": 1883
+  },
+  {
+    "rel": "ai-engine\\app\\services\\context_summarizer.py",
+    "lines": 42,
+    "name": "context_summarizer.py",
+    "size": 1522
+  },
+  {
+    "rel": "ai-engine\\app\\services\\counterargument_generator.py",
+    "lines": 40,
+    "name": "counterargument_generator.py",
+    "size": 1819
+  },
+  {
+    "rel": "ai-engine\\app\\services\\debate_state_machine.py",
+    "lines": 348,
+    "name": "debate_state_machine.py",
+    "size": 15802
+  },
+  {
+    "rel": "ai-engine\\app\\services\\delivery_coach.py",
+    "lines": 28,
+    "name": "delivery_coach.py",
+    "size": 1377
+  },
+  {
+    "rel": "ai-engine\\app\\services\\document_parser.py",
+    "lines": 44,
+    "name": "document_parser.py",
+    "size": 1663
+  },
+  {
+    "rel": "ai-engine\\app\\services\\evidence_grounding.py",
+    "lines": 106,
+    "name": "evidence_grounding.py",
+    "size": 4149
+  },
+  {
+    "rel": "ai-engine\\app\\services\\fallacy_agent.py",
+    "lines": 83,
+    "name": "fallacy_agent.py",
+    "size": 4954
+  },
+  {
+    "rel": "ai-engine\\app\\services\\input_validation.py",
+    "lines": 31,
+    "name": "input_validation.py",
+    "size": 1450
+  },
+  {
+    "rel": "ai-engine\\app\\services\\presentation_audio.py",
+    "lines": 36,
+    "name": "presentation_audio.py",
+    "size": 1334
+  },
+  {
+    "rel": "ai-engine\\app\\services\\timing.py",
+    "lines": 41,
+    "name": "timing.py",
+    "size": 1539
+  },
+  {
+    "rel": "ai-engine\\app\\services\\transcription.py",
+    "lines": 8,
+    "name": "transcription.py",
+    "size": 307
+  },
+  {
+    "rel": "ai-engine\\app\\services\\__init__.py",
+    "lines": 0,
+    "name": "__init__.py",
+    "size": 0
+  },
+  {
+    "rel": "ai-engine\\tests\\test_consistency.py",
+    "lines": 71,
+    "name": "test_consistency.py",
+    "size": 2958
+  },
+  {
+    "rel": "ai-engine\\tests\\__init__.py",
+    "lines": 0,
+    "name": "__init__.py",
+    "size": 0
+  },
+  {
+    "rel": "backend\\.env",
+    "lines": 3,
+    "name": ".env",
+    "size": 174
+  },
+  {
+    "rel": "backend\\aiService.js",
+    "lines": 62,
+    "name": "aiService.js",
+    "size": 1279
+  },
+  {
+    "rel": "backend\\package-lock.json",
+    "lines": 1983,
+    "name": "package-lock.json",
+    "size": 74073
+  },
+  {
+    "rel": "backend\\package.json",
+    "lines": 19,
+    "name": "package.json",
+    "size": 422
+  },
+  {
+    "rel": "backend\\seedTopics.js",
+    "lines": 245,
+    "name": "seedTopics.js",
+    "size": 24265
+  },
+  {
+    "rel": "backend\\server.js",
+    "lines": 2473,
+    "name": "server.js",
+    "size": 92871
+  },
+  {
+    "rel": "backend\\start-db.js",
+    "lines": 50,
+    "name": "start-db.js",
+    "size": 1367
+  },
+  {
+    "rel": "backend\\test-flow.js",
+    "lines": 183,
+    "name": "test-flow.js",
+    "size": 6215
+  },
+  {
+    "rel": "backend\\middleware\\auth.js",
+    "lines": 53,
+    "name": "auth.js",
+    "size": 1481
+  },
+  {
+    "rel": "backend\\models\\Announcement.js",
+    "lines": 7,
+    "name": "Announcement.js",
+    "size": 393
+  },
+  {
+    "rel": "backend\\models\\Assignment.js",
+    "lines": 16,
+    "name": "Assignment.js",
+    "size": 701
+  },
+  {
+    "rel": "backend\\models\\AuditLog.js",
+    "lines": 8,
+    "name": "AuditLog.js",
+    "size": 358
+  },
+  {
+    "rel": "backend\\models\\Class.js",
+    "lines": 13,
+    "name": "Class.js",
+    "size": 652
+  },
+  {
+    "rel": "backend\\models\\CoachingPlan.js",
+    "lines": 8,
+    "name": "CoachingPlan.js",
+    "size": 470
+  },
+  {
+    "rel": "backend\\models\\Draft.js",
+    "lines": 9,
+    "name": "Draft.js",
+    "size": 435
+  },
+  {
+    "rel": "backend\\models\\Goal.js",
+    "lines": 18,
+    "name": "Goal.js",
+    "size": 543
+  },
+  {
+    "rel": "backend\\models\\Note.js",
+    "lines": 9,
+    "name": "Note.js",
+    "size": 531
+  },
+  {
+    "rel": "backend\\models\\PlatformNotice.js",
+    "lines": 7,
+    "name": "PlatformNotice.js",
+    "size": 359
+  },
+  {
+    "rel": "backend\\models\\PresentationSession.js",
+    "lines": 42,
+    "name": "PresentationSession.js",
+    "size": 1414
+  },
+  {
+    "rel": "backend\\models\\Resource.js",
+    "lines": 8,
+    "name": "Resource.js",
+    "size": 425
+  },
+  {
+    "rel": "backend\\models\\Rubric.js",
+    "lines": 7,
+    "name": "Rubric.js",
+    "size": 365
+  },
+  {
+    "rel": "backend\\models\\ScheduledSession.js",
+    "lines": 13,
+    "name": "ScheduledSession.js",
+    "size": 440
+  },
+  {
+    "rel": "backend\\models\\Session.js",
+    "lines": 154,
+    "name": "Session.js",
+    "size": 3642
+  },
+  {
+    "rel": "backend\\models\\SupportTicket.js",
+    "lines": 8,
+    "name": "SupportTicket.js",
+    "size": 428
+  },
+  {
+    "rel": "backend\\models\\ToolUsageLog.js",
+    "lines": 10,
+    "name": "ToolUsageLog.js",
+    "size": 393
+  },
+  {
+    "rel": "backend\\models\\Topic.js",
+    "lines": 44,
+    "name": "Topic.js",
+    "size": 818
+  },
+  {
+    "rel": "backend\\models\\User.js",
+    "lines": 35,
+    "name": "User.js",
+    "size": 708
+  },
+  {
+    "rel": "frontend\\.gitignore",
+    "lines": 24,
+    "name": ".gitignore",
+    "size": 253
+  },
+  {
+    "rel": "frontend\\eslint.config.js",
+    "lines": 21,
+    "name": "eslint.config.js",
+    "size": 568
+  },
+  {
+    "rel": "frontend\\index.html",
+    "lines": 13,
+    "name": "index.html",
+    "size": 360
+  },
+  {
+    "rel": "frontend\\package-lock.json",
+    "lines": 3495,
+    "name": "package-lock.json",
+    "size": 122152
+  },
+  {
+    "rel": "frontend\\package.json",
+    "lines": 32,
+    "name": "package.json",
+    "size": 753
+  },
+  {
+    "rel": "frontend\\README.md",
+    "lines": 16,
+    "name": "README.md",
+    "size": 1027
+  },
+  {
+    "rel": "frontend\\vite.config.js",
+    "lines": 14,
+    "name": "vite.config.js",
+    "size": 262
+  },
+  {
+    "rel": "frontend\\public\\favicon.svg",
+    "lines": 1,
+    "name": "favicon.svg",
+    "size": 9522
+  },
+  {
+    "rel": "frontend\\public\\icons.svg",
+    "lines": 24,
+    "name": "icons.svg",
+    "size": 5031
+  },
+  {
+    "rel": "frontend\\src\\App.css",
+    "lines": 184,
+    "name": "App.css",
+    "size": 2891
+  },
+  {
+    "rel": "frontend\\src\\App.jsx",
+    "lines": 132,
+    "name": "App.jsx",
+    "size": 10286
+  },
+  {
+    "rel": "frontend\\src\\index.css",
+    "lines": 1,
+    "name": "index.css",
+    "size": 23
+  },
+  {
+    "rel": "frontend\\src\\main.jsx",
+    "lines": 10,
+    "name": "main.jsx",
+    "size": 229
+  },
+  {
+    "rel": "frontend\\src\\api\\aiEngine.js",
+    "lines": 9,
+    "name": "aiEngine.js",
+    "size": 314
+  },
+  {
+    "rel": "frontend\\src\\api\\axios.js",
+    "lines": 16,
+    "name": "axios.js",
+    "size": 365
+  },
+  {
+    "rel": "frontend\\src\\assets\\hero.png",
+    "lines": 322,
+    "name": "hero.png",
+    "size": 13057
+  },
+  {
+    "rel": "frontend\\src\\assets\\react.svg",
+    "lines": 1,
+    "name": "react.svg",
+    "size": 4126
+  },
+  {
+    "rel": "frontend\\src\\assets\\vite.svg",
+    "lines": 1,
+    "name": "vite.svg",
+    "size": 8709
+  },
+  {
+    "rel": "frontend\\src\\components\\AIChatbotWidget.jsx",
+    "lines": 278,
+    "name": "AIChatbotWidget.jsx",
+    "size": 11497
+  },
+  {
+    "rel": "frontend\\src\\components\\FormattedText.jsx",
+    "lines": 149,
+    "name": "FormattedText.jsx",
+    "size": 4659
+  },
+  {
+    "rel": "frontend\\src\\components\\IconStatCard.jsx",
+    "lines": 28,
+    "name": "IconStatCard.jsx",
+    "size": 1087
+  },
+  {
+    "rel": "frontend\\src\\components\\Layout.jsx",
+    "lines": 212,
+    "name": "Layout.jsx",
+    "size": 8616
+  },
+  {
+    "rel": "frontend\\src\\components\\ReportCard.jsx",
+    "lines": 159,
+    "name": "ReportCard.jsx",
+    "size": 7005
+  },
+  {
+    "rel": "frontend\\src\\components\\SkillProgress.jsx",
+    "lines": 95,
+    "name": "SkillProgress.jsx",
+    "size": 2514
+  },
+  {
+    "rel": "frontend\\src\\components\\StatCard.jsx",
+    "lines": 12,
+    "name": "StatCard.jsx",
+    "size": 317
+  },
+  {
+    "rel": "frontend\\src\\components\\VoiceRecorder,jsx.txt",
+    "lines": 259,
+    "name": "VoiceRecorder,jsx.txt",
+    "size": 9637
+  },
+  {
+    "rel": "frontend\\src\\components\\VoiceRecorder.jsx",
+    "lines": 208,
+    "name": "VoiceRecorder.jsx",
+    "size": 7249
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminAIServiceUsage.jsx",
+    "lines": 70,
+    "name": "AdminAIServiceUsage.jsx",
+    "size": 3395
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminAuditLogs.jsx",
+    "lines": 33,
+    "name": "AdminAuditLogs.jsx",
+    "size": 1485
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminContentManagement.jsx",
+    "lines": 70,
+    "name": "AdminContentManagement.jsx",
+    "size": 3515
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminNotificationCenter.jsx",
+    "lines": 49,
+    "name": "AdminNotificationCenter.jsx",
+    "size": 2217
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminSecurityCompliance.jsx",
+    "lines": 25,
+    "name": "AdminSecurityCompliance.jsx",
+    "size": 1240
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminSupportTickets.jsx",
+    "lines": 39,
+    "name": "AdminSupportTickets.jsx",
+    "size": 1734
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminSystemHealth.jsx",
+    "lines": 29,
+    "name": "AdminSystemHealth.jsx",
+    "size": 1330
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminTopActiveDebates.jsx",
+    "lines": 31,
+    "name": "AdminTopActiveDebates.jsx",
+    "size": 1405
+  },
+  {
+    "rel": "frontend\\src\\pages\\AdminUserManagement.jsx",
+    "lines": 82,
+    "name": "AdminUserManagement.jsx",
+    "size": 3589
+  },
+  {
+    "rel": "frontend\\src\\pages\\AIDebateSimulation.jsx",
+    "lines": 93,
+    "name": "AIDebateSimulation.jsx",
+    "size": 3946
+  },
+  {
+    "rel": "frontend\\src\\pages\\ArgumentAnalyzerTool.jsx",
+    "lines": 130,
+    "name": "ArgumentAnalyzerTool.jsx",
+    "size": 6120
+  },
+  {
+    "rel": "frontend\\src\\pages\\CoachFallacyReports.jsx",
+    "lines": 31,
+    "name": "CoachFallacyReports.jsx",
+    "size": 1419
+  },
+  {
+    "rel": "frontend\\src\\pages\\CoachingPlans.jsx",
+    "lines": 84,
+    "name": "CoachingPlans.jsx",
+    "size": 4108
+  },
+  {
+    "rel": "frontend\\src\\pages\\CoachLearners.jsx",
+    "lines": 95,
+    "name": "CoachLearners.jsx",
+    "size": 4407
+  },
+  {
+    "rel": "frontend\\src\\pages\\CoachNotifications.jsx",
+    "lines": 24,
+    "name": "CoachNotifications.jsx",
+    "size": 1040
+  },
+  {
+    "rel": "frontend\\src\\pages\\CoachPerformanceAnalytics.jsx",
+    "lines": 56,
+    "name": "CoachPerformanceAnalytics.jsx",
+    "size": 2789
+  },
+  {
+    "rel": "frontend\\src\\pages\\CoachPresentationReviews.jsx",
+    "lines": 40,
+    "name": "CoachPresentationReviews.jsx",
+    "size": 1790
+  },
+  {
+    "rel": "frontend\\src\\pages\\CoachSkillGapAnalysis.jsx",
+    "lines": 37,
+    "name": "CoachSkillGapAnalysis.jsx",
+    "size": 1668
+  },
+  {
+    "rel": "frontend\\src\\pages\\CounterargumentTool.jsx",
+    "lines": 127,
+    "name": "CounterargumentTool.jsx",
+    "size": 5457
+  },
+  {
+    "rel": "frontend\\src\\pages\\Dashboard.jsx",
+    "lines": 24,
+    "name": "Dashboard.jsx",
+    "size": 832
+  },
+  {
+    "rel": "frontend\\src\\pages\\DebateFormatsInfo.jsx",
+    "lines": 31,
+    "name": "DebateFormatsInfo.jsx",
+    "size": 1741
+  },
+  {
+    "rel": "frontend\\src\\pages\\DebateRoom.jsx",
+    "lines": 429,
+    "name": "DebateRoom.jsx",
+    "size": 17610
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorAnnouncements.jsx",
+    "lines": 52,
+    "name": "EducatorAnnouncements.jsx",
+    "size": 2338
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorAssignments.jsx",
+    "lines": 71,
+    "name": "EducatorAssignments.jsx",
+    "size": 3572
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorClassAnalytics.jsx",
+    "lines": 59,
+    "name": "EducatorClassAnalytics.jsx",
+    "size": 2688
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorClasses.jsx",
+    "lines": 148,
+    "name": "EducatorClasses.jsx",
+    "size": 7168
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorEvaluationQueue.jsx",
+    "lines": 45,
+    "name": "EducatorEvaluationQueue.jsx",
+    "size": 2126
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorKnowledgeBase.jsx",
+    "lines": 98,
+    "name": "EducatorKnowledgeBase.jsx",
+    "size": 4868
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorLearners.jsx",
+    "lines": 74,
+    "name": "EducatorLearners.jsx",
+    "size": 3694
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorNotifications.jsx",
+    "lines": 24,
+    "name": "EducatorNotifications.jsx",
+    "size": 1046
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorPresentationReports.jsx",
+    "lines": 40,
+    "name": "EducatorPresentationReports.jsx",
+    "size": 1810
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorResourceLibrary.jsx",
+    "lines": 59,
+    "name": "EducatorResourceLibrary.jsx",
+    "size": 2767
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorRubrics.jsx",
+    "lines": 73,
+    "name": "EducatorRubrics.jsx",
+    "size": 3292
+  },
+  {
+    "rel": "frontend\\src\\pages\\EducatorSkillGapAnalysis.jsx",
+    "lines": 34,
+    "name": "EducatorSkillGapAnalysis.jsx",
+    "size": 1532
+  },
+  {
+    "rel": "frontend\\src\\pages\\FallacyDetectorTool.jsx",
+    "lines": 128,
+    "name": "FallacyDetectorTool.jsx",
+    "size": 5295
+  },
+  {
+    "rel": "frontend\\src\\pages\\FeedbackCoaching.jsx",
+    "lines": 78,
+    "name": "FeedbackCoaching.jsx",
+    "size": 2997
+  },
+  {
+    "rel": "frontend\\src\\pages\\HelpSupport.jsx",
+    "lines": 76,
+    "name": "HelpSupport.jsx",
+    "size": 3858
+  },
+  {
+    "rel": "frontend\\src\\pages\\LearningPath.jsx",
+    "lines": 91,
+    "name": "LearningPath.jsx",
+    "size": 3724
+  },
+  {
+    "rel": "frontend\\src\\pages\\LearningResources.jsx",
+    "lines": 51,
+    "name": "LearningResources.jsx",
+    "size": 1714
+  },
+  {
+    "rel": "frontend\\src\\pages\\Login.jsx",
+    "lines": 218,
+    "name": "Login.jsx",
+    "size": 8286
+  },
+  {
+    "rel": "frontend\\src\\pages\\MyDebates.jsx",
+    "lines": 237,
+    "name": "MyDebates.jsx",
+    "size": 10729
+  },
+  {
+    "rel": "frontend\\src\\pages\\MyNotes.jsx",
+    "lines": 94,
+    "name": "MyNotes.jsx",
+    "size": 4016
+  },
+  {
+    "rel": "frontend\\src\\pages\\MyPresentations.jsx",
+    "lines": 83,
+    "name": "MyPresentations.jsx",
+    "size": 5008
+  },
+  {
+    "rel": "frontend\\src\\pages\\Notifications.jsx",
+    "lines": 30,
+    "name": "Notifications.jsx",
+    "size": 1038
+  },
+  {
+    "rel": "frontend\\src\\pages\\Onboarding.jsx",
+    "lines": 74,
+    "name": "Onboarding.jsx",
+    "size": 3055
+  },
+  {
+    "rel": "frontend\\src\\pages\\PerformanceScoresTable.jsx",
+    "lines": 51,
+    "name": "PerformanceScoresTable.jsx",
+    "size": 2028
+  },
+  {
+    "rel": "frontend\\src\\pages\\PhasedDebateRoom.jsx",
+    "lines": 291,
+    "name": "PhasedDebateRoom.jsx",
+    "size": 13444
+  },
+  {
+    "rel": "frontend\\src\\pages\\PresentationAnalysis.jsx",
+    "lines": 204,
+    "name": "PresentationAnalysis.jsx",
+    "size": 9856
+  },
+  {
+    "rel": "frontend\\src\\pages\\PresentationAnalysis.jsx,.txt",
+    "lines": 120,
+    "name": "PresentationAnalysis.jsx,.txt",
+    "size": 4932
+  },
+  {
+    "rel": "frontend\\src\\pages\\Profile.jsx",
+    "lines": 104,
+    "name": "Profile.jsx",
+    "size": 3568
+  },
+  {
+    "rel": "frontend\\src\\pages\\RecommendedForYou.jsx",
+    "lines": 80,
+    "name": "RecommendedForYou.jsx",
+    "size": 3777
+  },
+  {
+    "rel": "frontend\\src\\pages\\Reports.jsx",
+    "lines": 159,
+    "name": "Reports.jsx",
+    "size": 6718
+  },
+  {
+    "rel": "frontend\\src\\pages\\RolePermissionsInfo.jsx",
+    "lines": 42,
+    "name": "RolePermissionsInfo.jsx",
+    "size": 1998
+  },
+  {
+    "rel": "frontend\\src\\pages\\Settings.jsx",
+    "lines": 88,
+    "name": "Settings.jsx",
+    "size": 3877
+  },
+  {
+    "rel": "frontend\\src\\pages\\SkillTracking.jsx",
+    "lines": 61,
+    "name": "SkillTracking.jsx",
+    "size": 1887
+  },
+  {
+    "rel": "frontend\\src\\pages\\Topics.jsx",
+    "lines": 148,
+    "name": "Topics.jsx",
+    "size": 6557
+  },
+  {
+    "rel": "frontend\\src\\pages\\dashboards\\AdminDashboard.jsx",
+    "lines": 103,
+    "name": "AdminDashboard.jsx",
+    "size": 6288
+  },
+  {
+    "rel": "frontend\\src\\pages\\dashboards\\CoachDashboard.jsx",
+    "lines": 125,
+    "name": "CoachDashboard.jsx",
+    "size": 6214
+  },
+  {
+    "rel": "frontend\\src\\pages\\dashboards\\EducatorDashboard.jsx",
+    "lines": 109,
+    "name": "EducatorDashboard.jsx",
+    "size": 5503
+  },
+  {
+    "rel": "frontend\\src\\pages\\dashboards\\LearnerDashboard.jsx",
+    "lines": 388,
+    "name": "LearnerDashboard.jsx",
+    "size": 19166
+  },
+  {
+    "rel": "frontend\\src\\utils\\useAuth.jsx",
+    "lines": 26,
+    "name": "useAuth.jsx",
+    "size": 680
+  }
+]

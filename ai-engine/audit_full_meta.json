@@ -1,0 +1,2155 @@
+{
+  "deps": {
+    "backend": {
+      "@google/generative-ai": "^0.11.0",
+      "bcrypt": "^5.1.1",
+      "cors": "^2.8.5",
+      "dotenv": "^16.4.5",
+      "express": "^4.19.2",
+      "jsonwebtoken": "^9.0.2",
+      "mongoose": "^8.3.1",
+      "multer": "^1.4.5-lts.1"
+    },
+    "frontend": {
+      "@tailwindcss/vite": "^4.3.2",
+      "axios": "^1.18.1",
+      "react": "^19.2.7",
+      "react-dom": "^19.2.7",
+      "react-router-dom": "^7.18.1",
+      "recharts": "^3.9.2",
+      "tailwindcss": "^4.3.2"
+    },
+    "frontend_dev": {
+      "@eslint/js": "^10.0.1",
+      "@types/react": "^19.2.17",
+      "@types/react-dom": "^19.2.3",
+      "@vitejs/plugin-react": "^6.0.3",
+      "eslint": "^10.6.0",
+      "eslint-plugin-react-hooks": "^7.1.1",
+      "eslint-plugin-react-refresh": "^0.5.3",
+      "globals": "^17.7.0",
+      "vite": "^8.1.1"
+    },
+    "ai_engine": [
+      "fastapi",
+      "uvicorn[standard]",
+      "pydantic",
+      "langchain",
+      "langchain-google-genai",
+      "langchain-community",
+      "langgraph",
+      "faiss-cpu",
+      "requests",
+      "motor",
+      "psycopg2-binary",
+      "python-dotenv",
+      "python-multipart",
+      "faster-whisper"
+    ]
+  },
+  "env_keys": {
+    "backend": [
+      "MONGO_URI",
+      "JWT_SECRET",
+      "GEMINI_API_KEY"
+    ],
+    "ai-engine": [
+      "GOOGLE_API_KEY",
+      "REFEREE_MODEL",
+      "OPPONENT_MODEL",
+      "ASSISTANT_MODEL",
+      "MONGO_URL",
+      "MONGO_DB_NAME",
+      "DATABASE_URL",
+      "CORS_ORIGINS"
+    ]
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "lines": 5,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "LICENSE",
+      "lines": 21,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "README.md",
+      "lines": 2,
+      "language": "Markdown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/.env",
+      "lines": 12,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/.env.example",
+      "lines": 12,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/audit_extracted.json",
+      "lines": 1093,
+      "language": "JSON",
+      "symbols": [
+        "get_chat_llm"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/audit_files.json",
+      "lines": 956,
+      "language": "JSON",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "ai-engine/pytest.ini",
+      "lines": 2,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/requirements.txt",
+      "lines": 14,
+      "language": "Plain Text / Config",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "PostgreSQL"
+      ],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/scratch_test.js",
+      "lines": 42,
+      "language": "JavaScript",
+      "symbols": [
+        "renderInline"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/database.py",
+      "lines": 98,
+      "language": "Python",
+      "symbols": [
+        "get_postgres_connection",
+        "init_postgres",
+        "log_agent_call"
+      ],
+      "apis": [],
+      "db": [
+        "MongoDB",
+        "PostgreSQL"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/main.py",
+      "lines": 891,
+      "language": "Python",
+      "symbols": [
+        "extract_retry_after",
+        "google_rate_limit_exception_handler",
+        "google_client_error_handler",
+        "value_error_exception_handler",
+        "on_startup",
+        "PresentationAnalysisResponse",
+        "analyze_presentation",
+        "analyze_presentation_full"
+      ],
+      "apis": [
+        "/api/v1/presentation/analyze",
+        "/api/v1/presentation/analyze-full",
+        "/api/v1/debate/session/start",
+        "/api/v1/debate/session/{session_id}/submit",
+        "/api/v1/debate/session/{session_id}/continue",
+        "/api/v1/debate/session/start-stream"
+      ],
+      "db": [
+        "MongoDB",
+        "PostgreSQL"
+      ],
+      "ext_services": [
+        "Google Gemini API",
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "ai-engine/app/__init__.py",
+      "lines": 0,
+      "language": "Python",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/agents/chatbot_engine.py",
+      "lines": 201,
+      "language": "Python",
+      "symbols": [
+        "_extract_text",
+        "MultiAgentDebateEngine",
+        "__init__",
+        "_run_analysis_and_build_prompt",
+        "process_turn",
+        "process_turn_stream"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Wikipedia REST API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/agents/__init__.py",
+      "lines": 0,
+      "language": "Python",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/config/debate_formats.py",
+      "lines": 139,
+      "language": "Python",
+      "symbols": [
+        "normalize_format_name",
+        "get_format_config"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/core/config.py",
+      "lines": 37,
+      "language": "Python",
+      "symbols": [
+        "Settings"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/core/llm.py",
+      "lines": 21,
+      "language": "Python",
+      "symbols": [
+        "get_chat_llm"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/core/__init__.py",
+      "lines": 0,
+      "language": "Python",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/argument_analysis.py",
+      "lines": 20,
+      "language": "Python",
+      "symbols": [
+        "WeaknessWithFix",
+        "ArgumentAnalysisSchema"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/content_review.py",
+      "lines": 16,
+      "language": "Python",
+      "symbols": [
+        "SlideFeedback",
+        "ContentReviewSchema"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/counterargument.py",
+      "lines": 22,
+      "language": "Python",
+      "symbols": [
+        "CounterargumentItem",
+        "CounterargumentSchema"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/debate.py",
+      "lines": 22,
+      "language": "Python",
+      "symbols": [
+        "DebateTurnResponseSchema",
+        "ChatMessage"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/debate_session.py",
+      "lines": 38,
+      "language": "Python",
+      "symbols": [
+        "PhaseConfig",
+        "DebateFormatConfig",
+        "TranscriptEntry",
+        "DebateSessionState"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/delivery.py",
+      "lines": 14,
+      "language": "Python",
+      "symbols": [
+        "GrammarIssue",
+        "DeliveryAssessmentSchema"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/fallacy.py",
+      "lines": 42,
+      "language": "Python",
+      "symbols": [
+        "DetectedFallacy",
+        "FallacyReportSchema"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/presentation.py",
+      "lines": 11,
+      "language": "Python",
+      "symbols": [
+        "PresentationMetricsSchema"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/presentation_full.py",
+      "lines": 13,
+      "language": "Python",
+      "symbols": [
+        "PresentationFullAnalysisResponse"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/schemas/__init__.py",
+      "lines": 0,
+      "language": "Python",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/argument_analysis.py",
+      "lines": 33,
+      "language": "Python",
+      "symbols": [
+        "analyze_argument_quality"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/assistant_chat.py",
+      "lines": 78,
+      "language": "Python",
+      "symbols": [
+        "_extract_text",
+        "get_assistant_reply"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/services/content_reviewer.py",
+      "lines": 37,
+      "language": "Python",
+      "symbols": [
+        "review_content"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/services/context_summarizer.py",
+      "lines": 42,
+      "language": "Python",
+      "symbols": [
+        "summarize_history"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/services/counterargument_generator.py",
+      "lines": 40,
+      "language": "Python",
+      "symbols": [
+        "generate_counterarguments"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/services/debate_state_machine.py",
+      "lines": 348,
+      "language": "Python",
+      "symbols": [
+        "GraphState",
+        "_extract_text",
+        "_phase_rules_text",
+        "_make_user_phase_node",
+        "node",
+        "_make_ai_phase_node",
+        "node",
+        "_continue_check_node"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/delivery_coach.py",
+      "lines": 28,
+      "language": "Python",
+      "symbols": [
+        "analyze_delivery"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/document_parser.py",
+      "lines": 44,
+      "language": "Python",
+      "symbols": [
+        "parse_pptx",
+        "parse_pdf",
+        "parse_document"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/evidence_grounding.py",
+      "lines": 106,
+      "language": "Python",
+      "symbols": [
+        "_load_or_init_store",
+        "add_document",
+        "search_wikipedia",
+        "search_documents",
+        "retrieve_evidence"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API",
+        "Wikipedia REST API"
+      ]
+    },
+    {
+      "path": "ai-engine/app/services/fallacy_agent.py",
+      "lines": 83,
+      "language": "Python",
+      "symbols": [
+        "analyze_argument"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/input_validation.py",
+      "lines": 31,
+      "language": "Python",
+      "symbols": [
+        "validate_input"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/presentation_audio.py",
+      "lines": 36,
+      "language": "Python",
+      "symbols": [
+        "compute_presentation_metrics"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/timing.py",
+      "lines": 41,
+      "language": "Python",
+      "symbols": [
+        "timed_invoke"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/transcription.py",
+      "lines": 8,
+      "language": "Python",
+      "symbols": [
+        "transcribe_audio"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/app/services/__init__.py",
+      "lines": 0,
+      "language": "Python",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "ai-engine/tests/test_consistency.py",
+      "lines": 71,
+      "language": "Python",
+      "symbols": [
+        "test_argument_analysis_score_consistency",
+        "test_fallacy_detection_consistency"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "ai-engine/tests/__init__.py",
+      "lines": 0,
+      "language": "Python",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "backend/.env",
+      "lines": 3,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "backend/aiService.js",
+      "lines": 62,
+      "language": "JavaScript",
+      "symbols": [
+        "generateFeedback"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "backend/package-lock.json",
+      "lines": 1983,
+      "language": "JSON",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": [
+        "Google Gemini API",
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "backend/package.json",
+      "lines": 19,
+      "language": "JSON",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": [
+        "Google Gemini API"
+      ]
+    },
+    {
+      "path": "backend/seedTopics.js",
+      "lines": 245,
+      "language": "JavaScript",
+      "symbols": [
+        "run"
+      ],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/server.js",
+      "lines": 2473,
+      "language": "JavaScript",
+      "symbols": [
+        "computeBadges",
+        "computeWeightedScore",
+        "argumentQuality",
+        "communicationSkills",
+        "computeStreak",
+        "avgDimension",
+        "avgOf",
+        "dimAvg"
+      ],
+      "apis": [
+        "/signup",
+        "/login",
+        "/session",
+        "/session/:userId",
+        "/skills/:userId",
+        "/session/log"
+      ],
+      "db": [
+        "MongoDB",
+        "PostgreSQL"
+      ],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "backend/start-db.js",
+      "lines": 50,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "backend/test-flow.js",
+      "lines": 183,
+      "language": "JavaScript",
+      "symbols": [
+        "postJSON",
+        "getJSON",
+        "runEndToEndTests"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "backend/middleware/auth.js",
+      "lines": 53,
+      "language": "JavaScript",
+      "symbols": [
+        "verifyToken",
+        "requireRole"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Announcement.js",
+      "lines": 7,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Assignment.js",
+      "lines": 16,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/AuditLog.js",
+      "lines": 8,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Class.js",
+      "lines": 13,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/CoachingPlan.js",
+      "lines": 8,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Draft.js",
+      "lines": 9,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Goal.js",
+      "lines": 18,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Note.js",
+      "lines": 9,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/PlatformNotice.js",
+      "lines": 7,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/PresentationSession.js",
+      "lines": 42,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Resource.js",
+      "lines": 8,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Rubric.js",
+      "lines": 7,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/ScheduledSession.js",
+      "lines": 13,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Session.js",
+      "lines": 154,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/SupportTicket.js",
+      "lines": 8,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/ToolUsageLog.js",
+      "lines": 10,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/Topic.js",
+      "lines": 44,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "backend/models/User.js",
+      "lines": 35,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [
+        "MongoDB"
+      ],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/.gitignore",
+      "lines": 24,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/eslint.config.js",
+      "lines": 21,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/index.html",
+      "lines": 13,
+      "language": "HTML",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "lines": 3495,
+      "language": "JSON",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/package.json",
+      "lines": 32,
+      "language": "JSON",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/README.md",
+      "lines": 16,
+      "language": "Markdown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "lines": 14,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/public/favicon.svg",
+      "lines": 1,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/public/icons.svg",
+      "lines": 24,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/App.css",
+      "lines": 184,
+      "language": "CSS",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/App.jsx",
+      "lines": 132,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "App"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/index.css",
+      "lines": 1,
+      "language": "CSS",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/main.jsx",
+      "lines": 10,
+      "language": "JavaScript (React JSX)",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/api/aiEngine.js",
+      "lines": 9,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/api/axios.js",
+      "lines": 16,
+      "language": "JavaScript",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/assets/hero.png",
+      "lines": 322,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/assets/react.svg",
+      "lines": 1,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/assets/vite.svg",
+      "lines": 1,
+      "language": "Unknown",
+      "symbols": [],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/components/AIChatbotWidget.jsx",
+      "lines": 278,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "newConversationId",
+        "AIChatbotWidget",
+        "handleNewChat",
+        "handleOpenHistory",
+        "handleOpenConversation",
+        "startRename",
+        "saveRename",
+        "handleSend"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/components/FormattedText.jsx",
+      "lines": 149,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "FormattedText",
+        "renderInline"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/components/IconStatCard.jsx",
+      "lines": 28,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "IconStatCard"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/components/Layout.jsx",
+      "lines": 212,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Layout",
+        "handleLogout"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/components/ReportCard.jsx",
+      "lines": 159,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "ReportCard",
+        "argumentQuality",
+        "communicationSkills"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/components/SkillProgress.jsx",
+      "lines": 95,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "SkillProgress",
+        "formattedData"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/components/StatCard.jsx",
+      "lines": 12,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "StatCard"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/components/VoiceRecorder,jsx.txt",
+      "lines": 259,
+      "language": "Plain Text / Config",
+      "symbols": [
+        "DebateRoom",
+        "handleGenerate",
+        "handleConfirmedTranscript"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/components/VoiceRecorder.jsx",
+      "lines": 208,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "VoiceRecorder",
+        "targetSeconds",
+        "startRecording",
+        "finalDuration",
+        "stopRecording",
+        "resetRecording",
+        "handleConfirm",
+        "fmt"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/pages/AdminAIServiceUsage.jsx",
+      "lines": 70,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Bar",
+        "AdminAIServiceUsage"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminAuditLogs.jsx",
+      "lines": 33,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminAuditLogs"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminContentManagement.jsx",
+      "lines": 70,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminContentManagement",
+        "loadAll",
+        "deleteTopic",
+        "deleteResource",
+        "deleteRubric"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminNotificationCenter.jsx",
+      "lines": 49,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminNotificationCenter",
+        "load",
+        "handlePost",
+        "deactivate"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminSecurityCompliance.jsx",
+      "lines": 25,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminSecurityCompliance"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminSupportTickets.jsx",
+      "lines": 39,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminSupportTickets",
+        "load",
+        "resolve"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminSystemHealth.jsx",
+      "lines": 29,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminSystemHealth"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminTopActiveDebates.jsx",
+      "lines": 31,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminTopActiveDebates"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AdminUserManagement.jsx",
+      "lines": 82,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminUserManagement",
+        "load",
+        "handleAssign"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/AIDebateSimulation.jsx",
+      "lines": 93,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AIDebateSimulation",
+        "startWithOpponent",
+        "startCustom"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/pages/ArgumentAnalyzerTool.jsx",
+      "lines": 130,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "ArgumentAnalyzerTool",
+        "handleAnalyze"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API",
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CoachFallacyReports.jsx",
+      "lines": 31,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachFallacyReports"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CoachingPlans.jsx",
+      "lines": 84,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachingPlans",
+        "load",
+        "handleCreate",
+        "toggleMilestone"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CoachLearners.jsx",
+      "lines": 95,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachLearners",
+        "openNotes",
+        "saveNote"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CoachNotifications.jsx",
+      "lines": 24,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachNotifications"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CoachPerformanceAnalytics.jsx",
+      "lines": 56,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachPerformanceAnalytics"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CoachPresentationReviews.jsx",
+      "lines": 40,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachPresentationReviews"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CoachSkillGapAnalysis.jsx",
+      "lines": 37,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachSkillGapAnalysis"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/CounterargumentTool.jsx",
+      "lines": 127,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CounterargumentTool",
+        "handleGenerate"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API",
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/Dashboard.jsx",
+      "lines": 24,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Dashboard"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/pages/DebateFormatsInfo.jsx",
+      "lines": 31,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "DebateFormatsInfo"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/pages/DebateRoom.jsx",
+      "lines": 429,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "DebateRoom",
+        "handleSaveDraft",
+        "logFullReport",
+        "uploadAudio",
+        "consumeStream",
+        "handleGenerate",
+        "handleConfirmedTranscript"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorAnnouncements.jsx",
+      "lines": 52,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorAnnouncements",
+        "load",
+        "handlePost"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorAssignments.jsx",
+      "lines": 71,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorAssignments",
+        "load",
+        "handleCreate"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorClassAnalytics.jsx",
+      "lines": 59,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorClassAnalytics",
+        "loadAnalytics"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorClasses.jsx",
+      "lines": 148,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorClasses",
+        "load",
+        "handleAssignTopic",
+        "handleCreate",
+        "handleAddLearner",
+        "handleRemoveLearner",
+        "yet",
+        "yet"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorEvaluationQueue.jsx",
+      "lines": 45,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorEvaluationQueue",
+        "load",
+        "submit"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorKnowledgeBase.jsx",
+      "lines": 98,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorKnowledgeBase",
+        "load",
+        "handleAdd",
+        "handleTest"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Wikipedia REST API"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorLearners.jsx",
+      "lines": 74,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorLearners",
+        "openNotes",
+        "saveNote"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorNotifications.jsx",
+      "lines": 24,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorNotifications"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorPresentationReports.jsx",
+      "lines": 40,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorPresentationReports"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorResourceLibrary.jsx",
+      "lines": 59,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorResourceLibrary",
+        "load",
+        "handleAdd"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorRubrics.jsx",
+      "lines": 73,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorRubrics",
+        "load",
+        "handleCreate",
+        "handleDelete"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/EducatorSkillGapAnalysis.jsx",
+      "lines": 34,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorSkillGapAnalysis"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/FallacyDetectorTool.jsx",
+      "lines": 128,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "FallacyDetectorTool",
+        "handleDetect"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Google Gemini API",
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/FeedbackCoaching.jsx",
+      "lines": 78,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "FeedbackCoaching"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/HelpSupport.jsx",
+      "lines": 76,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "HelpSupport",
+        "loadTickets",
+        "submitTicket"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/LearningPath.jsx",
+      "lines": 91,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "LearningPath",
+        "handleSchedule"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/LearningResources.jsx",
+      "lines": 51,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "LearningResources"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "Wikipedia REST API"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/Login.jsx",
+      "lines": 218,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Login",
+        "handleAuth",
+        "handleKeyDown",
+        "UserIcon",
+        "MailIcon",
+        "LockIcon",
+        "RoleIcon",
+        "EyeIcon"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/MyDebates.jsx",
+      "lines": 237,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "sessionToReportCardResult",
+        "hasFullReport",
+        "MyDebates",
+        "handleCancelScheduled",
+        "handleDeleteDraft"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/MyNotes.jsx",
+      "lines": 94,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "MyNotes",
+        "load",
+        "resetForm",
+        "handleSave",
+        "handleEdit",
+        "handleDelete"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/MyPresentations.jsx",
+      "lines": 83,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "MyPresentations"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/Notifications.jsx",
+      "lines": 30,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Notifications"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/Onboarding.jsx",
+      "lines": 74,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Onboarding",
+        "toggleFormat",
+        "handleSubmit"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/PerformanceScoresTable.jsx",
+      "lines": 51,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "PerformanceScoresTable"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/PhasedDebateRoom.jsx",
+      "lines": 291,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "PhasedDebateRoom",
+        "handleApiResult",
+        "consumeStream",
+        "handleStart",
+        "submitPhase",
+        "respondContinue",
+        "fmtTime"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/PresentationAnalysis.jsx",
+      "lines": 204,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Ring",
+        "PresentationAnalysis",
+        "handleFileChange",
+        "startRecording",
+        "duration",
+        "stopRecording"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/PresentationAnalysis.jsx,.txt",
+      "lines": 120,
+      "language": "Plain Text / Config",
+      "symbols": [
+        "Ring",
+        "PresentationAnalysis",
+        "VoiceRecorderForPresentation",
+        "start",
+        "duration",
+        "stop"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/pages/Profile.jsx",
+      "lines": 104,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Profile",
+        "loadProfile",
+        "handleChooseCoach"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/RecommendedForYou.jsx",
+      "lines": 80,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "RecommendedForYou"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/Reports.jsx",
+      "lines": 159,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachReports",
+        "loadSessions",
+        "submitReview",
+        "exportCsv",
+        "EducatorReports",
+        "exportCsv",
+        "AdminReports",
+        "exportCsv"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/RolePermissionsInfo.jsx",
+      "lines": 42,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "RolePermissionsInfo"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    },
+    {
+      "path": "frontend/src/pages/Settings.jsx",
+      "lines": 88,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Settings",
+        "saveName",
+        "changePassword"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/SkillTracking.jsx",
+      "lines": 61,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "SkillTracking"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/Topics.jsx",
+      "lines": 148,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "Topics",
+        "loadTopics",
+        "handlePractice",
+        "handleCreate",
+        "this"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/dashboards/AdminDashboard.jsx",
+      "lines": 103,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "AdminDashboard"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/dashboards/CoachDashboard.jsx",
+      "lines": 125,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "CoachDashboard"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/dashboards/EducatorDashboard.jsx",
+      "lines": 109,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "EducatorDashboard"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/pages/dashboards/LearnerDashboard.jsx",
+      "lines": 388,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "LearnerDashboard",
+        "loadOverview",
+        "loadScheduledSessions",
+        "loadGoals",
+        "handleSchedule",
+        "handleDeleteScheduled",
+        "handleAddGoal",
+        "handleDeleteGoal"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": [
+        "HTTP REST / SSE"
+      ]
+    },
+    {
+      "path": "frontend/src/utils/useAuth.jsx",
+      "lines": 26,
+      "language": "JavaScript (React JSX)",
+      "symbols": [
+        "getUser",
+        "ProtectedRoute"
+      ],
+      "apis": [],
+      "db": [],
+      "ext_services": []
+    }
+  ]
+}
